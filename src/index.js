@@ -2,7 +2,12 @@ import "./style.css"
 
 const main = document.getElementById('main');
 
-main.innerHTML = '<div class="textBlue">Hello World!</div>';
+main.innerHTML = `
+  <div>
+    <h1 class="textBlue">Hello World!</h1>
+    <h2>Naver Map</h2>
+  </div>
+`;
 
 window.onload = () => {
   let map = null;
