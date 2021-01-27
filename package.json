@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Pure-Javascript/MemoMap/issues"
   },
-  "homepage": "https://github.com/Pure-Javascript/MemoMap#readme",
+  "homepage": "https://pure-javascript.github.io/MemoMap",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",

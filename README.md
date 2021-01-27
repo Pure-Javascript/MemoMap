@@ -1,3 +1,3 @@
 # MemoMap
 
-Memo Map
+[Memo Map Homepage](https://pure-javascript.github.io/MemoMap)
