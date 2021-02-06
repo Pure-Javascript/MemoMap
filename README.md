@@ -10,8 +10,9 @@
 
 
 ## 예제
-- https://navermaps.github.io/maps.js.ncp/docs/tutorial-digest.example.html
-
+- 네이버 맵 관련 :: https://navermaps.github.io/maps.js.ncp/docs/tutorial-digest.example.html
+- Geolocation API 관련 :: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API 
+- 네이버 맵(마커) 관련 :: https://navermaps.github.io/maps.js.ncp/docs/tutorial-1-marker-simple.example.html
 
 ## 참고 도움 주소
 - 네이버 콘솔 https://console.ncloud.com/mc/solution/naverService/application

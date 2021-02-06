@@ -6,18 +6,33 @@ const main = document.getElementById('main');
 main.innerHTML = `
   <div>
     <h1 class="textBlue">Hello World!</h1>
-    <h2>Naver Map</h2>
+    <h2>Naver Map!</h2>
   </div>
 `;
 
 window.onload = () => {
   let map = null;
 
+ function success(position) {
+  const latitude  = position.coords.latitude;
+  const longitude = position.coords.longitude;
+  map = new naver.maps.Map('map', {
+   center: new naver.maps.LatLng(latitude, longitude),
+   zoom: 16
+  });
+
+  var marker = new naver.maps.Marker({
+   position: new naver.maps.LatLng(latitude, longitude),
+   map: map
+  });
+ }
+
+ function error() {
+  alert("지도를 지원하지 않는 브라우저입니다");
+ }
+
   const initMap = () => {
-    map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.3595704, 127.105399),
-      zoom: 10
-    });
+   navigator.geolocation.getCurrentPosition(success, error);
   }
 
   initMap();
@@ -29,12 +44,8 @@ document.getElementById("search").addEventListener("click", function(e){
  const searchValue = document.getElementById("search-input").value;
  console.log("searchValu :", searchValue)
 
- axios.get("https://naveropenapi.apigw.ntruss.com/map-geocode/v2/geocode?query="+searchValue, {
+ axios.get("http://localhost:8080/address?query="+searchValue, {
   timeout: 4000,
-  headers: {
-   'X-NCP-APIGW-API-KEY-ID': '생략',
-   'X-NCP-APIGW-API-KEY':'생략'
-  },
   crossdomain: true
  }).then(data =>{
   console.log("data :", data);
